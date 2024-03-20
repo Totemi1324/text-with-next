@@ -1,5 +1,3 @@
-"use client";
-
 import type { Metadata } from "next";
 
 import { Providers } from "@/app/providers";
@@ -16,24 +14,25 @@ import "./globals.css";
   title: "Text with Next",
   description: "The story you continue is in your hands. Whatever you'll do, you can text - with Next!",
 };*/
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  const [theme] = useAtom(themeAtom);
+/*const [theme] = useAtom(themeAtom);
 
   const themeClasses = clsx({
     'dark-orange-blue': theme === 'dark',
     'dark': theme === 'dark',
     'light-orange-blue': theme === 'light',
     'light': theme === 'light',
-  });
+  });*/
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  
   return (
-    <html lang="en" className={themeClasses}>
-      <body className={primary_font.className}>
-        <Providers>
+    <html lang="en">
+      <body className={`${primary_font.className} antialiased`}>
+        <Providers attribute="class" defaultTheme="dark">
           <div className="flex flex-col min-h-screen">
             <main className="flex-grow">
               {children}

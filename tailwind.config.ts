@@ -15,8 +15,7 @@ const config: Config = {
   plugins: [
     nextui({
       themes: {
-        "dark-orange-blue": {
-          extend: "dark", // Inherit default values from the dark theme
+        dark: {
           colors: {
             background: "#070707",
             foreground: "#ffffff",
@@ -51,8 +50,7 @@ const config: Config = {
             focus: "#f9af43",
           },
         },
-        "light-orange-blue": {
-          extend: "light", // Inherit default values from the light theme
+        light: {
           colors: {
             background: "#ffffff",
             foreground: "#070707",
